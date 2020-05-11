@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+ul, li { list-style: none; }
+a { text-decoration: none; }
+h1{ font-size: 20px; text-align: center; }
+input{ margin-top: 20px; }
+body{ background-color: #63A1FF; }
+
+.clear { clear: both; }
+.container { 
+    max-width: 1280px; 
+    width: 100%;
+    margin: 0 auto; 
+    padding: 0 2%; 
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    height: 100vh;
+
+
+
+    color: white;
+    font-weight: bold;
+    flex-direction: column;
+}
+
+.app{
+    padding: 30px;
+    max-width: 300px;
+    max-height: 50vh;
+
+    overflow-y: scroll;
+    
+    background-color:#4B79BF;
+    box-shadow: 0px 0px 10px 5px rgba(0,0,0,.5);
+}
+
+a::before{
+    content: '\f00d';
+    font-family: fontAwesome;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+  }
+  
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+  }
+  
+::-webkit-scrollbar-thumb {
+    background: #63A1FF;
+    border-radius: 10px;
+  }
+
+nav ul li{
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,.5);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 5px;
+    margin: 20px;
+}
+
+input[type='text']{
+    outline: none;
+    border: none;
+    background-color: transparent;
+    border-bottom: 2px solid rgba(255,255, 255, .3);
+    color: white;
+    font-weight: bold;
+
+    transition: .4s;
+}
+input[type='text']:hover,
+input[type='text']:focus{
+    border-bottom: 2px solid rgba(255, 255,255, .9);
+}
+
+input[type='submit']{
+    outline: none;
+    border: none;
+    background-color: rgba(255,255,255,.6);
+    box-shadow: 0px 0px 5px 1px rgba(0,0,0,.5);
+    border-radius: 50px;
+    font-weight: bold;
+    color: black;
+    padding: 5px;
+    font-size: 10px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+input[type='submit']:hover{
+    background-color: rgba(255,255,255,.3);
+    color: white;
+    box-shadow: none;
+    
+}
+
+::placeholder{
+    font-size: 10px;
+    padding: 0 10px;
+    color: white;
+    opacity: .4;
+}
+
+.box{
+    display: flex;
+    flex-direction: row;
+}
+
+.effectClose{
+    transform: translate3d(-300px,0,0);
+    transition: 0.3s;
+}
+
+@media screen and (max-width:400px){
+    .app { 
+        max-width: 100%;
+        padding: 10px;
+    }
+    .box{
+        flex-direction: column;
+    }
+
+    input[type='submit']{
+        content: 'Adicionar';
+        width: 100%;
+    }
+
+}
